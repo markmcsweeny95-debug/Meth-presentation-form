@@ -1,212 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Crystal Meth Presentation</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Crystal Meth Presentation</title>
 
-  <style>
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-      scroll-behavior:smooth;
-    }
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  scroll-behavior:smooth;
+}
 
-    body{
-      font-family: Arial, Helvetica, sans-serif;
-      background:#0f172a;
-      color:#e2e8f0;
-      line-height:1.7;
-    }
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  background:#0f172a;
+  color:#e2e8f0;
+  line-height:1.7;
+}
 
-    header{
-      min-height:100vh;
-      display:flex;
-      flex-direction:column;
-      justify-content:center;
-      align-items:center;
-      text-align:center;
-      padding:40px;
-      background:
-        linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.7)),
-        url('https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=1400&auto=format&fit=crop');
-      background-size:cover;
-      background-position:center;
-    }
+header{
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding:40px;
+  background:
+    linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.7)),
+    url('https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=1400&auto=format&fit=crop');
+  background-size:cover;
+  background-position:center;
+}
 
-    header h1{
-      font-size:4rem;
-      color:#38bdf8;
-      margin-bottom:15px;
-    }
+header h1{
+  font-size:2.5rem;
+  color:#38bdf8;
+  max-width:1000px;
+}
 
-    header p{
-      font-size:1.2rem;
-      max-width:700px;
-      color:#cbd5e1;
-    }
+header p{
+  margin-top:15px;
+  max-width:800px;
+  color:#cbd5e1;
+}
 
-    nav{
-      position:sticky;
-      top:0;
-      background:#020617;
-      z-index:1000;
-      padding:12px;
-      display:flex;
-      justify-content:center;
-      flex-wrap:wrap;
-      gap:10px;
-      border-bottom:1px solid #1e293b;
-    }
+nav{
+  position:sticky;
+  top:0;
+  background:#020617;
+  padding:12px;
+  display:flex;
+  justify-content:center;
+  gap:10px;
+  flex-wrap:wrap;
+  border-bottom:1px solid #1e293b;
+}
 
-    nav a{
-      color:white;
-      text-decoration:none;
-      padding:10px 16px;
-      border-radius:8px;
-      transition:0.2s;
-      font-size:0.95rem;
-    }
+nav a{
+  color:white;
+  text-decoration:none;
+  padding:8px 14px;
+  border-radius:8px;
+}
 
-    nav a:hover{
-      background:#1e293b;
-    }
+nav a:hover{
+  background:#1e293b;
+}
 
-    section{
-      padding:80px 20px;
-      max-width:1100px;
-      margin:auto;
-    }
+section{
+  padding:80px 20px;
+  max-width:1000px;
+  margin:auto;
+}
 
-    h2{
-      color:#38bdf8;
-      margin-bottom:20px;
-      font-size:2rem;
-    }
+h2{
+  color:#38bdf8;
+  margin-bottom:10px;
+}
 
-    .card{
-      background:#111827;
-      border:1px solid #1f2937;
-      border-radius:18px;
-      overflow:hidden;
-      margin-top:25px;
-      box-shadow:0 10px 30px rgba(0,0,0,0.3);
-    }
+.card{
+  background:#111827;
+  padding:25px;
+  border-radius:18px;
+  margin-top:20px;
+}
 
-    .card img{
-      width:100%;
-      height:350px;
-      object-fit:cover;
-    }
+img{
+  width:100%;
+  border-radius:15px;
+  margin-top:15px;
+}
 
-    .card-content{
-      padding:25px;
-    }
+.quiz-box{
+  background:#111827;
+  padding:30px;
+  border-radius:18px;
+  text-align:center;
+}
 
-    ul{
-      padding-left:20px;
-    }
+.quiz-btn{
+  display:block;
+  width:100%;
+  margin:12px 0;
+  padding:15px;
+  border:none;
+  border-radius:12px;
+  background:#1e293b;
+  color:white;
+  cursor:pointer;
+}
 
-    .warning{
-      border-left:6px solid #ef4444;
-    }
+.correct{background:#16a34a !important;}
+.wrong{background:#dc2626 !important;}
 
-    .grid{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-      gap:20px;
-      margin-top:20px;
-    }
+#feedback{
+  margin-top:15px;
+  font-size:1.3rem;
+  font-weight:bold;
+}
 
-    .quiz-box{
-      background:#111827;
-      padding:30px;
-      border-radius:18px;
-      border:1px solid #1f2937;
-      text-align:center;
-    }
+#score{
+  margin-top:10px;
+  color:#38bdf8;
+}
 
-    .quiz-question{
-      font-size:1.5rem;
-      margin-bottom:25px;
-    }
+button.control{
+  margin-top:20px;
+  padding:12px 20px;
+  border:none;
+  border-radius:10px;
+  background:#38bdf8;
+  color:black;
+  cursor:pointer;
+}
 
-    .quiz-btn{
-      display:block;
-      width:100%;
-      margin:12px 0;
-      padding:18px;
-      border:none;
-      border-radius:12px;
-      background:#1e293b;
-      color:white;
-      font-size:1rem;
-      cursor:pointer;
-      transition:0.2s;
-    }
-
-    .quiz-btn:hover{
-      background:#334155;
-    }
-
-    .correct{
-      background:#16a34a !important;
-    }
-
-    .wrong{
-      background:#dc2626 !important;
-    }
-
-    #feedback{
-      margin-top:25px;
-      font-size:1.5rem;
-      font-weight:bold;
-    }
-
-    #score{
-      margin-top:20px;
-      font-size:1.2rem;
-      color:#38bdf8;
-    }
-
-    #nextBtn,
-    #restartBtn{
-      margin-top:25px;
-      padding:15px 25px;
-      border:none;
-      border-radius:12px;
-      background:#38bdf8;
-      color:black;
-      font-size:1rem;
-      cursor:pointer;
-    }
-
-    footer{
-      text-align:center;
-      padding:30px;
-      background:#020617;
-      font-size:0.9rem;
-      color:#94a3b8;
-    }
-
-  </style>
+footer{
+  text-align:center;
+  padding:30px;
+  background:#020617;
+  color:#94a3b8;
+}
+</style>
 </head>
 
 <body>
 
 <header>
-  <h1>Crystal Meth</h1>
-  <p>
-    Understanding the effects, dangers and impacts of methamphetamine.
-    Educational presentation for Sixth Form Form Time.
-  </p>
+  <h1>Crystal Meth Presentation</h1>
+  <p>Effects, risks, and dangers of methamphetamine</p>
 </header>
 
 <nav>
-  <a href="#what">What Is It?</a>
+  <a href="#what">What</a>
   <a href="#effects">Effects</a>
-  <a href="#brain">Brain Impact</a>
   <a href="#law">Law</a>
   <a href="#quiz">Quiz</a>
 </nav>
@@ -215,335 +164,154 @@
   <h2>What is Crystal Meth?</h2>
 
   <div class="card">
+    Crystal meth is a powerful stimulant drug that affects the brain and body.
+    It increases dopamine levels, creating intense energy and euphoria, but is highly addictive.
     <img src="https://images.unsplash.com/photo-1585435557343-3b092031d4f7?q=80&w=1400&auto=format&fit=crop">
-
-    <div class="card-content">
-      Crystal methamphetamine is a powerful illegal stimulant drug that affects the central nervous system.
-      <br><br>
-      It creates intense bursts of energy and alertness by increasing dopamine levels in the brain.
-    </div>
   </div>
 </section>
 
 <section id="effects">
-
-  <h2>Short-Term Effects</h2>
-
-  <div class="grid">
-
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1516321497487-e288fb19713f?q=80&w=1200&auto=format&fit=crop">
-
-      <div class="card-content">
-        <ul>
-          <li>Extreme energy</li>
-          <li>High confidence</li>
-          <li>Reduced appetite</li>
-          <li>Staying awake for long periods</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="card warning">
-      <img src="https://images.unsplash.com/photo-1505751172876-fa1923c5c528?q=80&w=1200&auto=format&fit=crop">
-
-      <div class="card-content">
-        <ul>
-          <li>Rapid heart rate</li>
-          <li>Paranoia and anxiety</li>
-          <li>Dangerous impulsive behaviour</li>
-          <li>Risk of overdose</li>
-        </ul>
-      </div>
-    </div>
-
-  </div>
-
-  <h2 style="margin-top:70px;">Long-Term Effects</h2>
-
-  <div class="card warning">
-    <img src="https://images.unsplash.com/photo-1526256262350-7da7584cf5eb?q=80&w=1400&auto=format&fit=crop">
-
-    <div class="card-content">
-      <ul>
-        <li>Severe addiction</li>
-        <li>Memory and concentration problems</li>
-        <li>Weight loss and malnutrition</li>
-        <li>Tooth decay (“meth mouth”)</li>
-        <li>Depression and hallucinations</li>
-      </ul>
-    </div>
-  </div>
-
-</section>
-
-<section id="brain">
-
-  <h2>How It Affects The Brain</h2>
+  <h2>Effects</h2>
 
   <div class="card">
-    <img src="https://images.unsplash.com/photo-1516574187841-cb9cc2ca948b?q=80&w=1400&auto=format&fit=crop">
-
-    <div class="card-content">
-      Meth massively increases dopamine — the brain chemical linked to pleasure and reward.
-      <br><br>
-      Over time, the brain struggles to produce dopamine naturally.
-    </div>
+    Short-term effects include energy, alertness, and reduced appetite.<br><br>
+    Long-term effects include addiction, paranoia, tooth decay, and brain damage.
+    <img src="https://images.unsplash.com/photo-1526256262350-7da7584cf5eb?q=80&w=1400&auto=format&fit=crop">
   </div>
-
 </section>
 
 <section id="law">
-
   <h2>Legal Status in the UK</h2>
 
-  <div class="card warning">
+  <div class="card">
+    Crystal meth is a Class A drug in the UK.<br><br>
+    Possession can lead to up to 7 years in prison, and supplying can lead to life imprisonment.
     <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=1400&auto=format&fit=crop">
-
-    <div class="card-content">
-      Crystal meth is a <strong>Class A drug</strong> in the UK.
-      <br><br>
-
-      <ul>
-        <li>Possession: up to 7 years prison</li>
-        <li>Supplying: up to life imprisonment</li>
-      </ul>
-    </div>
   </div>
-
 </section>
 
 <section id="quiz">
-
   <h2>Class Quiz</h2>
 
   <div class="quiz-box">
 
-    <div id="quizContent">
+    <h3 id="question"></h3>
 
-      <div class="quiz-question" id="question">
-        Loading...
-      </div>
+    <div id="answers"></div>
 
-      <div id="answers"></div>
+    <div id="feedback"></div>
 
-      <div id="feedback"></div>
+    <div id="score">Score: 0 / 10</div>
 
-      <div id="score">
-        Score: 0 / 0
-      </div>
-
-      <button id="nextBtn" onclick="nextQuestion()" style="display:none;">
-        Next Question
-      </button>
-
-      <button id="restartBtn" onclick="restartQuiz()" style="display:none;">
-        Restart Quiz
-      </button>
-
-    </div>
+    <button class="control" onclick="nextQ()">Next</button>
+    <button class="control" onclick="restart()">Restart</button>
 
   </div>
-
 </section>
 
 <footer>
-  Educational content for school use only.
+  Educational presentation only
 </footer>
 
 <script>
 
+/* HARDER PROGRESSIVE QUIZ */
+
 const quiz = [
 
-{
-  question:"What class drug is crystal meth in the UK?",
-  answers:["Class B","Class A","Class C"],
-  correct:1
-},
+["What class drug is meth in the UK?",["Class B","Class A","Class C"],1],
+["What type of drug is methamphetamine?",["Stimulant","Depressant","Hallucinogen"],0],
+["Which system does meth mainly affect?",["Nervous system","Digestive system","Respiratory system"],0],
 
-{
-  question:"Which body system is mainly affected?",
-  answers:["Digestive system","Nervous system","Skeleton"],
-  correct:1
-},
+["What chemical increases strongly from meth use?",["Dopamine","Insulin","Haemoglobin"],0],
+["Which is a short-term effect?",["Increased energy","Stronger bones","Better eyesight"],0],
+["Which is a risk during use?",["High heart rate","Improved immunity","Lower stress hormones"],0],
 
-{
-  question:"Can meth become addictive quickly?",
-  answers:["Yes","No","Only after years"],
-  correct:0
-},
+["Why is meth addictive?",["Floods dopamine system","Builds muscle fast","Improves sleep"],0],
+["Which is a long-term effect?",["Tooth decay","Improved memory","Stronger bones"],0],
+["Meth use can cause:",["Paranoia","Perfect focus","Better reflexes"],0],
 
-{
-  question:"Which is a long-term effect?",
-  answers:["Better memory","Tooth decay","Improved sleep"],
-  correct:1
-},
-
-{
-  question:"Can meth affect mental health?",
-  answers:["No","Only slightly","Yes"],
-  correct:2
-},
-
-{
-  question:"What can meth increase?",
-  answers:["Heart rate","Height","Hair growth"],
-  correct:0
-},
-
-{
-  question:"Which can be linked to meth use?",
-  answers:["Paranoia","Improved sleep","Better eyesight"],
-  correct:0
-},
-
-{
-  question:"Is supplying meth illegal?",
-  answers:["No","Yes","Only in some areas"],
-  correct:1
-},
-
-{
-  question:"Can meth damage the brain?",
-  answers:["Yes","No","Only in adults"],
-  correct:0
-},
-
-{
-  question:"Should people seek help for addiction?",
-  answers:["No","Only if forced","Yes"],
-  correct:2
-}
+["What is tolerance?",["Needing more for same effect","Drug stops instantly","No brain change"],0],
+["What happens to dopamine production long-term?",["It decreases","It increases","It stays same"],0],
+["Which is most dangerous?",["Binge use over days","One coffee","Short walk"],0]
 
 ];
 
-let currentQuestion = 0;
+let q = 0;
 let score = 0;
 let answered = false;
 
-function loadQuestion(){
+function load(){
 
-  answered = false;
+answered = false;
+document.getElementById("feedback").innerHTML = "";
 
-  document.getElementById("feedback").innerHTML = "";
+let data = quiz[q];
 
-  document.getElementById("nextBtn").style.display =
-  "none";
+document.getElementById("question").innerText = data[0];
 
-  const q = quiz[currentQuestion];
+let html = "";
 
-  document.getElementById("question").innerHTML =
-  q.question;
+data[1].forEach((a,i)=>{
 
-  let html = "";
+html += `
+<button class="quiz-btn" onclick="check(${i})">${a}</button>
+`;
 
-  q.answers.forEach((answer,index)=>{
+});
 
-    html += `
-      <button class="quiz-btn"
-      onclick="checkAnswer(${index})"
-      id="btn${index}">
-      ${answer}
-      </button>
-    `;
-
-  });
-
-  document.getElementById("answers").innerHTML =
-  html;
+document.getElementById("answers").innerHTML = html;
 
 }
 
-function checkAnswer(index){
+function check(i){
 
-  if(answered) return;
+if(answered) return;
+answered = true;
 
-  answered = true;
+let data = quiz[q];
+let btns = document.querySelectorAll(".quiz-btn");
 
-  const q = quiz[currentQuestion];
+btns.forEach(b=>b.disabled=true);
 
-  const buttons =
-    document.querySelectorAll(".quiz-btn");
+if(i === data[2]){
+document.getElementById("feedback").innerText="Correct";
+btns[i].classList.add("correct");
+score++;
+}else{
+document.getElementById("feedback").innerText="Incorrect";
+btns[i].classList.add("wrong");
+btns[data[2]].classList.add("correct");
+}
 
-  buttons.forEach(btn=>{
-    btn.disabled = true;
-  });
-
-  if(index === q.correct){
-
-    document.getElementById("feedback").innerHTML =
-    "✅ Correct";
-
-    document.getElementById("btn"+index)
-    .classList.add("correct");
-
-    score++;
-
-  } else {
-
-    document.getElementById("feedback").innerHTML =
-    "❌ Incorrect";
-
-    document.getElementById("btn"+index)
-    .classList.add("wrong");
-
-    document.getElementById("btn"+q.correct)
-    .classList.add("correct");
-
-  }
-
-  document.getElementById("score").innerHTML =
-  `Score: ${score} / ${currentQuestion + 1}`;
-
-  document.getElementById("nextBtn").style.display =
-  "inline-block";
+document.getElementById("score").innerText =
+`Score: ${score} / 10`;
 
 }
 
-function nextQuestion(){
+function nextQ(){
 
-  currentQuestion++;
+q++;
 
-  if(currentQuestion >= quiz.length){
+if(q>=10){
+document.getElementById("question").innerText="Quiz Complete";
+document.getElementById("answers").innerHTML="";
+document.getElementById("feedback").innerText=`Final Score: ${score} / 10`;
+return;
+}
 
-    document.getElementById("question").innerHTML =
-    "Quiz Complete";
-
-    document.getElementById("answers").innerHTML =
-    "";
-
-    document.getElementById("feedback").innerHTML =
-    `Final Score: ${score} / ${quiz.length}`;
-
-    document.getElementById("nextBtn").style.display =
-    "none";
-
-    document.getElementById("restartBtn").style.display =
-    "inline-block";
-
-    return;
-  }
-
-  loadQuestion();
+load();
 
 }
 
-function restartQuiz(){
-
-  currentQuestion = 0;
-  score = 0;
-
-  document.getElementById("restartBtn").style.display =
-  "none";
-
-  document.getElementById("score").innerHTML =
-  "Score: 0 / 0";
-
-  loadQuestion();
-
+function restart(){
+q=0;
+score=0;
+load();
+document.getElementById("score").innerText="Score: 0 / 10";
 }
 
-loadQuestion();
+load();
 
 </script>
 
