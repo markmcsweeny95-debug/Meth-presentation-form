@@ -14,7 +14,7 @@
 }
 
 body{
-  font-family: Arial, Helvetica, sans-serif;
+  font-family:Arial,Helvetica,sans-serif;
   background:#0f172a;
   color:#e2e8f0;
   line-height:1.7;
@@ -29,22 +29,22 @@ header{
   text-align:center;
   padding:40px;
   background:
-    linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.7)),
-    url('https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=1400&auto=format&fit=crop');
+  linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.85)),
+  url('https://images.unsplash.com/photo-1603398938378-e54eab446dde?q=80&w=1400&auto=format&fit=crop');
   background-size:cover;
   background-position:center;
 }
 
 header h1{
-  font-size:2.5rem;
+  font-size:3rem;
   color:#38bdf8;
-  max-width:1000px;
+  margin-bottom:20px;
 }
 
 header p{
-  margin-top:15px;
   max-width:800px;
   color:#cbd5e1;
+  font-size:1.2rem;
 }
 
 nav{
@@ -57,12 +57,13 @@ nav{
   gap:10px;
   flex-wrap:wrap;
   border-bottom:1px solid #1e293b;
+  z-index:1000;
 }
 
 nav a{
   color:white;
   text-decoration:none;
-  padding:8px 14px;
+  padding:10px 16px;
   border-radius:8px;
 }
 
@@ -78,7 +79,7 @@ section{
 
 h2{
   color:#38bdf8;
-  margin-bottom:10px;
+  margin-bottom:15px;
 }
 
 .card{
@@ -88,10 +89,10 @@ h2{
   margin-top:20px;
 }
 
-img{
+.card img{
   width:100%;
   border-radius:15px;
-  margin-top:15px;
+  margin-top:20px;
 }
 
 .quiz-box{
@@ -111,13 +112,23 @@ img{
   background:#1e293b;
   color:white;
   cursor:pointer;
+  font-size:1rem;
 }
 
-.correct{background:#16a34a !important;}
-.wrong{background:#dc2626 !important;}
+.quiz-btn:hover{
+  background:#334155;
+}
+
+.correct{
+  background:#16a34a !important;
+}
+
+.wrong{
+  background:#dc2626 !important;
+}
 
 #feedback{
-  margin-top:15px;
+  margin-top:20px;
   font-size:1.3rem;
   font-weight:bold;
 }
@@ -135,6 +146,11 @@ button.control{
   background:#38bdf8;
   color:black;
   cursor:pointer;
+  font-size:1rem;
+}
+
+button.control:hover{
+  opacity:0.9;
 }
 
 footer{
@@ -143,6 +159,33 @@ footer{
   background:#020617;
   color:#94a3b8;
 }
+
+#warningScreen{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:black;
+  display:none;
+  justify-content:center;
+  align-items:center;
+  flex-direction:column;
+  z-index:99999;
+  text-align:center;
+  padding:20px;
+}
+
+#warningScreen h1{
+  color:red;
+  font-size:4rem;
+  margin-bottom:20px;
+}
+
+#warningScreen p{
+  max-width:700px;
+  font-size:1.5rem;
+}
 </style>
 </head>
 
@@ -150,13 +193,16 @@ footer{
 
 <header>
   <h1>Crystal Meth Presentation</h1>
-  <p>Effects, risks, and dangers of methamphetamine</p>
+  <p>
+    Effects, risks and dangers of methamphetamine.
+  </p>
 </header>
 
 <nav>
-  <a href="#what">What</a>
+  <a href="#what">What Is It?</a>
   <a href="#effects">Effects</a>
-  <a href="#law">Law</a>
+  <a href="#law">UK Law</a>
+  <a href="#illegal">Where To Buy?</a>
   <a href="#quiz">Quiz</a>
 </nav>
 
@@ -164,33 +210,106 @@ footer{
   <h2>What is Crystal Meth?</h2>
 
   <div class="card">
-    Crystal meth is a powerful stimulant drug that affects the brain and body.
-    It increases dopamine levels, creating intense energy and euphoria, but is highly addictive.
-    <img src="https://images.unsplash.com/photo-1585435557343-3b092031d4f7?q=80&w=1400&auto=format&fit=crop">
+
+    Crystal methamphetamine is a powerful stimulant drug that affects the central nervous system.
+    It is usually found as clear crystal-like rocks or powder and can create intense bursts of energy and alertness.
+
+    <br><br>
+
+    Meth dramatically increases dopamine levels in the brain, which can cause temporary feelings of confidence or euphoria.
+    However, repeated use can quickly lead to severe addiction and dangerous physical and mental health effects.
+
+    <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=1400&auto=format&fit=crop">
+
   </div>
 </section>
 
 <section id="effects">
-  <h2>Effects</h2>
+
+  <h2>Effects of Methamphetamine</h2>
 
   <div class="card">
-    Short-term effects include energy, alertness, and reduced appetite.<br><br>
-    Long-term effects include addiction, paranoia, tooth decay, and brain damage.
-    <img src="https://images.unsplash.com/photo-1526256262350-7da7584cf5eb?q=80&w=1400&auto=format&fit=crop">
+
+    Short-term effects can include:
+    <br><br>
+
+    • Increased energy
+    <br>
+    • Staying awake for long periods
+    <br>
+    • Reduced appetite
+    <br>
+    • Rapid heartbeat
+    <br>
+    • Anxiety and paranoia
+
+    <br><br>
+
+    Long-term use can seriously damage both physical and mental health.
+    Users may experience hallucinations, severe addiction, memory loss, depression and major dental damage often called “meth mouth”.
+
+    <br><br>
+
+    Meth addiction can also destroy relationships, education, employment and financial stability.
+
+    <img src="https://images.unsplash.com/photo-1516549655169-df83a0774514?q=80&w=1400&auto=format&fit=crop">
+
   </div>
+
 </section>
 
 <section id="law">
+
   <h2>Legal Status in the UK</h2>
 
   <div class="card">
-    Crystal meth is a Class A drug in the UK.<br><br>
-    Possession can lead to up to 7 years in prison, and supplying can lead to life imprisonment.
+
+    Crystal meth is a Class A drug in the United Kingdom.
+
+    <br><br>
+
+    Possession can result in:
+    <br>
+    • Up to 7 years in prison
+    <br>
+    • An unlimited fine
+    <br>
+    • Or both
+
+    <br><br>
+
+    Supplying or producing methamphetamine is treated far more seriously and can result in life imprisonment.
+
+    <br><br>
+
+    Because of its high addiction risk and dangerous effects, UK police and health organisations treat methamphetamine as an extremely dangerous illegal substance.
+
     <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=1400&auto=format&fit=crop">
+
   </div>
+
+</section>
+
+<section id="illegal">
+
+  <h2>Where To Buy Meth?</h2>
+
+  <div class="card" style="text-align:center;">
+
+    <p>
+      Click below to find out.
+    </p>
+
+    <button class="control" onclick="triggerWarning()">
+      Find Out
+    </button>
+
+  </div>
+
 </section>
 
 <section id="quiz">
+
   <h2>Class Quiz</h2>
 
   <div class="quiz-box">
@@ -201,39 +320,91 @@ footer{
 
     <div id="feedback"></div>
 
-    <div id="score">Score: 0 / 10</div>
+    <div id="score">
+      Score: 0 / 10
+    </div>
 
-    <button class="control" onclick="nextQ()">Next</button>
-    <button class="control" onclick="restart()">Restart</button>
+    <button class="control" onclick="nextQ()">
+      Next
+    </button>
+
+    <button class="control" onclick="restart()">
+      Restart
+    </button>
 
   </div>
+
 </section>
 
 <footer>
   Educational presentation only
 </footer>
 
+<div id="warningScreen">
+
+  <h1>
+    🚨 ILLEGAL 🚨
+  </h1>
+
+  <p>
+    Attempting to buy or supply crystal meth is illegal in the UK.
+    <br><br>
+    Methamphetamine is a Class A drug and can lead to prison sentences,
+    severe addiction and major health problems.
+  </p>
+
+  <audio id="sirenAudio">
+    <source src="https://actions.google.com/sounds/v1/alarms/alarm_clock.ogg" type="audio/ogg">
+  </audio>
+
+</div>
+
 <script>
 
-/* HARDER PROGRESSIVE QUIZ */
+function triggerWarning(){
+
+const screen = document.getElementById("warningScreen");
+const audio = document.getElementById("sirenAudio");
+
+screen.style.display = "flex";
+
+audio.currentTime = 0;
+audio.play();
+
+setTimeout(()=>{
+
+screen.style.display = "none";
+
+audio.pause();
+audio.currentTime = 0;
+
+window.location.href = "#what";
+
+},5000);
+
+}
 
 const quiz = [
 
-["What class drug is meth in the UK?",["Class B","Class A","Class C"],1],
+["What class drug is crystal meth in the UK?",["Class B","Class A","Class C"],1],
+
 ["What type of drug is methamphetamine?",["Stimulant","Depressant","Hallucinogen"],0],
+
 ["Which system does meth mainly affect?",["Nervous system","Digestive system","Respiratory system"],0],
 
 ["What chemical increases strongly from meth use?",["Dopamine","Insulin","Haemoglobin"],0],
+
 ["Which is a short-term effect?",["Increased energy","Stronger bones","Better eyesight"],0],
+
 ["Which is a risk during use?",["High heart rate","Improved immunity","Lower stress hormones"],0],
 
 ["Why is meth addictive?",["Floods dopamine system","Builds muscle fast","Improves sleep"],0],
+
 ["Which is a long-term effect?",["Tooth decay","Improved memory","Stronger bones"],0],
+
 ["Meth use can cause:",["Paranoia","Perfect focus","Better reflexes"],0],
 
-["What is tolerance?",["Needing more for same effect","Drug stops instantly","No brain change"],0],
-["What happens to dopamine production long-term?",["It decreases","It increases","It stays same"],0],
-["Which is most dangerous?",["Binge use over days","One coffee","Short walk"],0]
+["What is tolerance?",["Needing more for same effect","Drug stops instantly","No brain change"],0]
 
 ];
 
@@ -244,44 +415,62 @@ let answered = false;
 function load(){
 
 answered = false;
+
 document.getElementById("feedback").innerHTML = "";
 
 let data = quiz[q];
 
-document.getElementById("question").innerText = data[0];
+document.getElementById("question").innerText =
+data[0];
 
 let html = "";
 
 data[1].forEach((a,i)=>{
 
 html += `
-<button class="quiz-btn" onclick="check(${i})">${a}</button>
+<button class="quiz-btn" onclick="check(${i})">
+${a}
+</button>
 `;
 
 });
 
-document.getElementById("answers").innerHTML = html;
+document.getElementById("answers").innerHTML =
+html;
 
 }
 
 function check(i){
 
 if(answered) return;
+
 answered = true;
 
 let data = quiz[q];
-let btns = document.querySelectorAll(".quiz-btn");
+
+let btns =
+document.querySelectorAll(".quiz-btn");
 
 btns.forEach(b=>b.disabled=true);
 
 if(i === data[2]){
-document.getElementById("feedback").innerText="Correct";
+
+document.getElementById("feedback").innerText =
+"✅ Correct";
+
 btns[i].classList.add("correct");
+
 score++;
+
 }else{
-document.getElementById("feedback").innerText="Incorrect";
+
+document.getElementById("feedback").innerText =
+"❌ Incorrect";
+
 btns[i].classList.add("wrong");
+
 btns[data[2]].classList.add("correct");
+
 }
 
 document.getElementById("score").innerText =
@@ -293,11 +482,19 @@ function nextQ(){
 
 q++;
 
-if(q>=10){
-document.getElementById("question").innerText="Quiz Complete";
-document.getElementById("answers").innerHTML="";
-document.getElementById("feedback").innerText=`Final Score: ${score} / 10`;
+if(q >= 10){
+
+document.getElementById("question").innerText =
+"Quiz Complete";
+
+document.getElementById("answers").innerHTML =
+"";
+
+document.getElementById("feedback").innerText =
+`Final Score: ${score} / 10`;
+
 return;
+
 }
 
 load();
@@ -305,10 +502,15 @@ load();
 }
 
 function restart(){
-q=0;
-score=0;
+
+q = 0;
+score = 0;
+
+document.getElementById("score").innerText =
+"Score: 0 / 10";
+
 load();
-document.getElementById("score").innerText="Score: 0 / 10";
+
 }
 
 load();
