@@ -6,6 +6,7 @@
 <title>Crystal Meth Presentation</title>
 
 <style>
+
 *{
   margin:0;
   padding:0;
@@ -170,22 +171,10 @@ footer{
   display:none;
   justify-content:center;
   align-items:center;
-  flex-direction:column;
   z-index:99999;
-  text-align:center;
-  padding:20px;
+  overflow:hidden;
 }
 
-#warningScreen h1{
-  color:red;
-  font-size:4rem;
-  margin-bottom:20px;
-}
-
-#warningScreen p{
-  max-width:700px;
-  font-size:1.5rem;
-}
 </style>
 </head>
 
@@ -193,6 +182,7 @@ footer{
 
 <header>
   <h1>Crystal Meth Presentation</h1>
+
   <p>
     Effects, risks and dangers of methamphetamine.
   </p>
@@ -207,21 +197,26 @@ footer{
 </nav>
 
 <section id="what">
+
   <h2>What is Crystal Meth?</h2>
 
   <div class="card">
 
     Crystal methamphetamine is a powerful stimulant drug that affects the central nervous system.
-    It is usually found as clear crystal-like rocks or powder and can create intense bursts of energy and alertness.
 
     <br><br>
 
-    Meth dramatically increases dopamine levels in the brain, which can cause temporary feelings of confidence or euphoria.
+    It usually appears as clear crystal-like rocks or powder and can create intense bursts of energy and alertness.
+
+    <br><br>
+
+    Meth dramatically increases dopamine levels in the brain, which can create temporary feelings of confidence or euphoria.
     However, repeated use can quickly lead to severe addiction and dangerous physical and mental health effects.
 
-    <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=1400&auto=format&fit=crop">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/8/8f/Crystal_Meth.jpg">
 
   </div>
+
 </section>
 
 <section id="effects">
@@ -340,43 +335,28 @@ footer{
   Educational presentation only
 </footer>
 
-<div id="warningScreen">
-
-  <h1>
-    🚨 ILLEGAL 🚨
-  </h1>
-
-  <p>
-    Attempting to buy or supply crystal meth is illegal in the UK.
-    <br><br>
-    Methamphetamine is a Class A drug and can lead to prison sentences,
-    severe addiction and major health problems.
-  </p>
-
-  <audio id="sirenAudio">
-    <source src="https://actions.google.com/sounds/v1/alarms/alarm_clock.ogg" type="audio/ogg">
-  </audio>
-
-</div>
+<div id="warningScreen"></div>
 
 <script>
 
 function triggerWarning(){
 
 const screen = document.getElementById("warningScreen");
-const audio = document.getElementById("sirenAudio");
+
+screen.innerHTML = `
+<img src="1779182734489.png"
+style="
+width:100%;
+height:100%;
+object-fit:cover;
+">
+`;
 
 screen.style.display = "flex";
-
-audio.currentTime = 0;
-audio.play();
 
 setTimeout(()=>{
 
 screen.style.display = "none";
-
-audio.pause();
-audio.currentTime = 0;
 
 window.location.href = "#what";
 
